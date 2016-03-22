@@ -163,6 +163,7 @@ header h1 a {
 section {
     transition: all 0.9s;
     background: rgb(1, 87, 155);
+    min-height: 800px;
     width: 95%;
     margin: 0px auto;
     padding-top: 140px;
