@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Climate summaries</title>
+    <meta name="description" content="Climate Summaries">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#01579B">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app="ClimateSummaries" ng-controller="MainCtrl" ng-cloak>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header>
+        <h1><a href="#">Climate Summaries</a></h1>
+        <div class="header-menu" ng-init="mainTab = 'uk'">
+            <a href="" ng-class="{ active:mainTab === 'uk' }" ng-click="mainTab = 'uk'">UK</a>
+            <a href="" ng-class="{ active:mainTab === 'england' }" ng-click="mainTab = 'england'">England</a>
+            <a href="" ng-class="{ active:mainTab === 'wales' }" ng-click="mainTab = 'wales'">Wales</a>
+            <a href="" ng-class="{ active:mainTab === 'scotland' }" ng-click="mainTab = 'scotland'">Scotland</a>
+        </div>
+    </header>
+    <section>
+        <div class="weather-menu" ng-init="tab = 'max'">
+            <a href="" ng-class="{ active2:tab === 'max'}" ng-click="tab = 'max'">Max temp</a>
+            <a href="" ng-class="{ active2:tab === 'min'}" ng-click="tab = 'min'">Min temp</a>
+            <a href="" ng-class="{ active2:tab === 'mean'}" ng-click="tab = 'mean'">Mean temp</a>
+            <a href="" ng-class="{ active2:tab === 'sunshine'}" ng-click="tab = 'sunshine'">Sunshine</a>
+            <a href="" ng-class="{ active2:tab === 'rainfall'}" ng-click="tab = 'rainfall'">Rainfall</a>
+        </div>
+        <div class="year-boxes-upper">
+            <div class="each-year-box" ng-repeat="single in dataset" ng-if="single.weather == tab && single.location == mainTab">
+                <h2>{{single.year}}</h2>
+                <div>
+                    <p>January: {{single.jan}}</p>
+                    <p>February: {{single.feb}}</p>
+                    <p>March: {{single.march}}</p>
+                    <p>April: {{single.april}}</p>
+                    <p>May: {{single.march}}</p>
+                    <p>June: {{single.june}}</p>
+                    <p>July: {{single.july}}</p>
+                    <p>August: {{single.august}}</p>
+                    <p>September: {{single.september}}</p>
+                    <p>October: {{single.octuber}}</p>
+                    <p>November: {{single.november}}</p>
+                    <p>December: {{single.december}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy;Climate Summaries
+    </footer>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-resource.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
