@@ -164,6 +164,7 @@ section {
     transition: all 0.9s;
     background: rgb(1, 87, 155);
     width: 95%;
+    min-height: 470px;
     margin: 0px auto;
     padding-top: 140px;
 }
