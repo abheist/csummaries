@@ -14,7 +14,7 @@
 
 Move par.py to parent folder.
 Make directory structure like:
-"""
+'''
 -csummaries
 |--app
   |--data
@@ -25,4 +25,4 @@ Make directory structure like:
   |--logo.png
   |--robots.txt
 |-par.py
-"""
+'''
