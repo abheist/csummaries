@@ -11,3 +11,16 @@
 - AngularJS
 - HTML
 - CSS
+
+Move par.py to parent folder.
+Make directory structure like:
+-csummaries
+|--app
+  |--data
+  |--fonts
+  |--scripts
+  |--styles
+  |--index.html
+  |--logo.png
+  |--robots.txt
+|-par.py
